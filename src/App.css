@@ -262,7 +262,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: 0;
   padding: 260px 0 350px 0;
-  background-image: url('./assets/img/Beach.png');
+  background-image: url('./assets/img/Beach_small.png');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -576,8 +576,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  padding: 0 0 50px 0;
-  background-image: url('./assets/img/footer-bg.png');
+  padding: 0 0 10px 0;
+  background-color: #D5F0F7;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -648,7 +648,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .footer p {
   font-weight: 400;
   font-size: 14px;
-  color: #B8B8B8;
+  color: #0B0C5C;
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
