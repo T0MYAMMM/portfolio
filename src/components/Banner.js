@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/surfer.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -11,7 +11,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
+  const toRotate = [ "Hi!", "안녕!", "你好!", "Bonjour!", "Ciao!", "привет!"," مرحبًا !", "Merhaba!" ];
   const period = 2000;
 
   useEffect(() => {
@@ -54,11 +54,11 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Tom`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Thomas is a student at Bandung Institute of Technology (ITB) majoring in Information System and Technology. He has a passion for exploring new things, especially in the fields of information technology such as artificial intelligence, IT project/product management, and also system design. He actively participates in various campus organizations such as the Informatics Student Association (HMIF), STI Student Association (ASSISTS), and several other campus units.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+              <div className={isVisible ? "animate__animated animate__fadeIn" : ""} style={{ background: "rgba(11, 12, 30, 0.5)", padding: "50px", borderRadius:50, }}>
+                {/*<span className="tagline">Welcome to my Portfolio</span>*/}
+                  <h1><span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Hi!", "안녕!", "你好!", "Bonjour!", "Ciao!", "привет!"," مرحبًا !", "Merhaba!"]'><span className="wrap">{text}</span></span>{`, I'm Tom`}</h1>
+                  <p style={{color:'#fff'}}>Thomas is a student at Bandung Institute of Technology (ITB) majoring in Information System and Technology. He has a passion for exploring new things, especially in the fields of information technology such as artificial intelligence, IT project/product management, and also system design. He actively participates in various campus organizations such as the Informatics Student Association (HMIF), STI Student Association (ASSISTS), and several other campus units.</p>
+                  <button onClick={() => window.location.href = 'https://www.instagram.com/portofolionyatom/'}>Let’s Connect <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
           </Col>

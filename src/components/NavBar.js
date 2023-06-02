@@ -54,8 +54,7 @@ export const NavBar = () => {
                             <a href="https://www.linkedin.com/in/thomas-stefen-mardianto-940357202/"><img src={navIcon1} alt="Icon" /></a>
                             <a href="https://github.com/T0MYAMMM/"><img src={navIcon2} alt="Icon" /></a>
                             <a href="https://instagram.com/thomaassm"><img src={navIcon3} alt="Icon" /></a>
-                        </div>
-                        <button className="vvd" onClick={() => console.log("connect")}><span>Let's Connect</span></button>
+                        </div>                
                     </span>
                 </Navbar.Collapse>
             </Container>
