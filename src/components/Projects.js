@@ -9,37 +9,25 @@ import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
 
-  const projects = [
+  const website = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
+      title: " My Portfolio",
+      description: "Visually engaging and responsive portfolio website project that showcases creative works.",
+      imgUrl: require("../assets/img/website_portfolio.png"),
     },
+  ];
+
+  const mobile = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
+      title: "Nille App",
+      description: "Nille aims to redefine fish care by providing a sleek smartphone app that offers advanced features, a distinct user experience, and stunning visuals.",
+      imgUrl: require("../assets/img/mobile_nilleapp.png"),
     },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
+  ];
+
+  const other = [
+    
+    
   ];
 
   return (
@@ -52,7 +40,7 @@ export const Projects = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Projects</h2>
                 <p>This portfolios contain some  implementation of design into websites, mobile apps, and other coding things. </p>
-                <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                <Tab.Container id="website-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
                       <Nav.Link eventKey="first">Websites</Nav.Link>
@@ -69,7 +57,7 @@ export const Projects = () => {
                     <Tab.Pane eventKey="first">
                       <Row>
                         {
-                          projects.map((project, index) => {
+                          website.map((project, index) => {
                             return (
                               <ProjectCard
                                 key={index}
@@ -82,11 +70,34 @@ export const Projects = () => {
                     </Tab.Pane>
 
                     <Tab.Pane eventKey="second">
-                      <p>Ini adalah bagian portofolio dari aplikasi mobile</p>
+                      <Row>
+                        {
+                          mobile.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
                     </Tab.Pane>
                     
                     <Tab.Pane eventKey="third">
-                      <p>Ini adalah bagian portofolio selain dari websites dan aplikasi mobile</p>
+                      <Row>
+                        {
+                          other.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
+
                     </Tab.Pane>
 
                   </Tab.Content>
