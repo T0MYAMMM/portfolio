@@ -26,7 +26,11 @@ export const Projects = () => {
   ];
 
   const other = [
-    
+    {
+      title: "Smart Mosque Capacity Monitoring",
+      description: "Develop system that caould count, detect, and mark the praying area in a Mosque.",
+      imgUrl: require("../assets/img/other_reksti.png"),
+    },
     
   ];
 
