@@ -29,8 +29,7 @@ html {
 
 body {
   font-weight: 400;
-  overflow-x: hidden;
-  position: relative;
+  display: block;
   background-color: #FFDDA6 !important;
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
@@ -79,6 +78,10 @@ p.success {
 
 p.danger {
 	color: red;
+}
+
+.App {
+  display: block;
 }
 
 /************ Navbar Css ************/
@@ -153,6 +156,7 @@ span.navbar-text {
 .social-icon a:hover::before {
   transform: scale(1);
 }
+
 
 .social-icon a img {
   width: 40%;
@@ -331,44 +335,50 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Skills Css ************/
 .skill {
-  padding: 0 0 50px 0;
+  padding-bottom: 100px;
   position: relative;
 }
 .skill-bx {
-  background: #fa4f0b;
+  display: block;
+  margin: 100px 100px 0px 100px;
+  background: #07974f;
   border-radius: 64px;
   text-align: center;
-  padding: 60px 50px;
+  padding: 50px;
   margin-top: -150px;
-  
 }
 .skill h2 {
 	font-size: 45px;
 	font-weight: 700;
 }
 .skill p {
-    color: #ffffff;
-    font-size: 18px;
-    letter-spacing: 0.8px;
-    line-height: 1.5em;
-    margin: 14px 0 75px 0;
+  color: #ffffff;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 20px 150px 50px 150px;
+  text-align: center;
 }
 .skill-slider {
-  width: 100%;
-  position:sticky;
+  width: 90%;
+  height: 200px;
+  left: 5%;
 }
 .skill-slider .item{
-  width: 60%;
-  margin-left: 80px;
-  margin-right: 80px;
+  width: 200px;
+  padding: 10px;
+  margin-left:50px
 }
 .skill-slider .item img {
-  width: 150px;
-  margin-right: 10px;
+  border-radius: 50px;
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
 }
 
 .background-image-left {
-  top: 28%;
+  top: 20%;
+  left:-10%;
   position: absolute;
   bottom: 0;
   width: 40%;
@@ -488,7 +498,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-style: italic;
   font-weight: 400;
   font-size: 15px;
-
   letter-spacing: 0.8px;
 }
 .background-image-right {
@@ -574,18 +583,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  padding: 10px 0 20px 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background-color: #D5F0F7;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 .newsletter-bx {
   background: #FFFFFF;
   border-radius: 55px;
   color: #121212;
   padding: 85px 125px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   margin-top: -122px;
 }
 .newsletter-bx h3 {

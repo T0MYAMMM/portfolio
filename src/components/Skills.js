@@ -4,8 +4,17 @@ import meter3 from "../assets/img/meter3.svg";
 import react_native from "../assets/img/react-native.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
+import table from "../assets/img/watermelon.svg";
+import React from "react";
+
+function Product(props) {
+  return (
+    <div className="item">
+      <img src={props.url} alt="Image" />
+    </div>
+  );
+}
+
 
 export const Skills = () => {
   const responsive = {
@@ -31,6 +40,52 @@ export const Skills = () => {
       itemClass: 'carousel-item'
     }
   };
+  
+  const productData = [
+    {
+      id: 1,
+      imageurl:
+        "https://images.ctfassets.net/mrop88jh71hl/55rrbZfwMaURHZKAUc5oOW/9e5fe805eb03135b82e962e92169ce6d/python-programming-language.png?w=750&h=750&q=100&fm=png",
+      name: "Python",
+    },
+    {
+      id: 2,
+      imageurl:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+      name: "JavaScript",
+    },
+    {
+      id: 4,
+      imageurl:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
+      name: "React-Native",
+    },
+    {
+      id: 5,
+      imageurl:
+        "https://yt3.googleusercontent.com/ytc/AGIKgqOUoSLwRUS1hlbouSLdhsan2C392WHp2bJRj1HzFg=s900-c-k-c0x00ffffff-no-rj",
+      name: "TensorFlow",
+    },
+    {
+      id: 6,
+      imageurl:
+        "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
+      name: "Figma",
+    },
+    {
+      id: 7,
+      imageurl:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/788px-Adobe_Illustrator_CC_icon.svg.png",
+      name: "Adobe Illustrator",
+    }
+  ];  
+
+  const product = productData.map((item) => (
+    <Product
+      name={item.name}
+      url={item.imageurl}
+    />
+  ));
 
   return (
     <section className="skill" id="skills">
@@ -39,42 +94,15 @@ export const Skills = () => {
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
-                        <p>These are all my capabilities<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={react_native} alt="Image" />
-                                <h5>React Native</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>Python</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>Figma</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
+                        <p>"Remember, progress is not a destination, but a continuous process fueled by the passion for learning and the desire to become better each day."</p>
+                        <Carousel responsive={responsive} infinite={true} className="skill-slider">
+                            {product}
                         </Carousel>
                     </div>
                 </div>
             </div>
         </div>
-        
+        <img className="background-image-left" src={table} alt="Image" />
     </section>
   )
 }

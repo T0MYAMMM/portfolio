@@ -45,6 +45,7 @@ export const Projects = () => {
                 <h2>Projects</h2>
                 <p>This portfolios contain some  implementation of design into websites, mobile apps, and other coding things. </p>
                 <Tab.Container id="website-tabs" defaultActiveKey="first">
+                  
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
                       <Nav.Link eventKey="first">Websites</Nav.Link>
@@ -56,10 +57,11 @@ export const Projects = () => {
                       <Nav.Link eventKey="third">Others</Nav.Link>
                     </Nav.Item>
                   </Nav>
+                  
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     
                     <Tab.Pane eventKey="first">
-                      <Row>
+                      <Row className="justify-content-center">
                         {
                           website.map((project, index) => {
                             return (
@@ -74,7 +76,7 @@ export const Projects = () => {
                     </Tab.Pane>
 
                     <Tab.Pane eventKey="second">
-                      <Row>
+                      <Row className="justify-content-center">
                         {
                           mobile.map((project, index) => {
                             return (
@@ -89,7 +91,7 @@ export const Projects = () => {
                     </Tab.Pane>
                     
                     <Tab.Pane eventKey="third">
-                      <Row>
+                      <Row className="justify-content-center">
                         {
                           other.map((project, index) => {
                             return (
