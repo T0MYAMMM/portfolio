@@ -31,7 +31,11 @@ export const Projects = () => {
       description: "Develop system that caould count, detect, and mark the praying area in a Mosque.",
       imgUrl: require("../assets/img/other_reksti.png"),
     },
-    
+    {
+      title: "Face Recognition using Python",
+      description: "Simple face detection and recognition by utilizing python libraries.",
+      imgUrl: require("../assets/img/facerecognition.png"),
+    },
   ];
 
   return (
