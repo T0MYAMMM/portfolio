@@ -7,37 +7,9 @@ import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
+import { website, mobile, other } from "./data";
+
 export const Projects = () => {
-
-  const website = [
-    {
-      title: " My Portfolio",
-      description: "Visually engaging and responsive portfolio website project that showcases creative works.",
-      imgUrl: require("../assets/img/website_portfolio.png"),
-    },
-  ];
-
-  const mobile = [
-    {
-      title: "Nille App",
-      description: "Nille aims to redefine fish care by providing a sleek smartphone app that offers advanced features, a distinct user experience, and stunning visuals.",
-      imgUrl: require("../assets/img/mobile_nilleapp.png"),
-    },
-  ];
-
-  const other = [
-    {
-      title: "Smart Mosque Capacity Monitoring",
-      description: "Develop system that caould count, detect, and mark the praying area in a Mosque.",
-      imgUrl: require("../assets/img/other_reksti.png"),
-    },
-    {
-      title: "Face Recognition using Python",
-      description: "Simple face detection and recognition by utilizing python libraries.",
-      imgUrl: require("../assets/img/facerecognition.png"),
-    },
-  ];
-
   return (
     <section className="project" id="project">
       <Container>
