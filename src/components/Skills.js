@@ -5,6 +5,7 @@ import react_native from "../assets/img/react-native.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import table from "../assets/img/watermelon.svg";
+import icecream from "../assets/img/icecream.svg";
 import React from "react";
 
 function Product(props) {
@@ -101,8 +102,7 @@ export const Skills = () => {
                     </div>
                 </div>
             </div>
-        </div>
-        <img className="background-image-left" src={table} alt="Image" />
+        </div>  
     </section>
   )
 }
